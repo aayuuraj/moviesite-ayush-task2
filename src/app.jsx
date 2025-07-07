@@ -9,7 +9,7 @@ const App = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    axios.get('https://jsonfakery-proxy.vercel.app/api/proxy')
+    axios.get('https://jsonfakery.com/movies/paginated')
       .then(res => {
         const data = res.data?.data || res.data
         setMovies(parseApiData(data))
